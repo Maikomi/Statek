@@ -33,7 +33,7 @@ public class SailController : MonoBehaviour
         ApplyRotation();
     }
 
-    
+
     private void Update()
     {
         if (Keyboard.current == null)

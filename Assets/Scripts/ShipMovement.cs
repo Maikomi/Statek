@@ -119,7 +119,7 @@ public class ShipMovement : MonoBehaviour
         this.ApplyWaterResistance(deltaTime);
 
         // 7. Apply manual rudder steering input
-        this.HandleSteeringInput(deltaTime);
+        //this.HandleSteeringInput(deltaTime);
 
         // 8. Update position and rotation in world space
         this.transform.position += this.linearVelocity * deltaTime;
@@ -143,28 +143,28 @@ public class ShipMovement : MonoBehaviour
         this.angularVelocity -= this.angularVelocity * this.angularDrag * deltaTime;
     }
 
-    private void HandleSteeringInput(float deltaTime)
-    {
-        if (Keyboard.current == null)
-        {
-            return;
-        }
+    // private void HandleSteeringInput(float deltaTime)
+    // {
+    //     if (Keyboard.current == null)
+    //     {
+    //         return;
+    //     }
 
-        float steerInput = 0f;
-        if (Keyboard.current.leftArrowKey.isPressed)
-        {
-            steerInput -= 1f;
-        }
+    //     float steerInput = 0f;
+    //     if (Keyboard.current.leftArrowKey.isPressed)
+    //     {
+    //         steerInput -= 1f;
+    //     }
 
-        if (Keyboard.current.rightArrowKey.isPressed)
-        {
-            steerInput += 1f;
-        }
+    //     if (Keyboard.current.rightArrowKey.isPressed)
+    //     {
+    //         steerInput += 1f;
+    //     }
 
-        float speedFactor = Mathf.Clamp01(this.linearVelocity.magnitude / 2f);
-        float torque = steerInput * this.rudderTorque * (0.2f + 0.8f * speedFactor);
-        this.angularVelocity += torque * deltaTime;
-    }
+    //     float speedFactor = Mathf.Clamp01(this.linearVelocity.magnitude / 2f);
+    //     float torque = steerInput * this.rudderTorque * (0.2f + 0.8f * speedFactor);
+    //     this.angularVelocity += torque * deltaTime;
+    // }
 
     private void OnDrawGizmosSelected()
     {

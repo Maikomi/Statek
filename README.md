@@ -15,5 +15,5 @@ A ship simulation project developed in **Unity**, featuring wind-driven movement
 ### Project Status
 Work in progress — focused on improving sailing physics and ship handling.
 
-[![Watch the video]([https://img.youtube.com/vi/<VIDEO_ID>/hqdefault.jpg](https://vimeo.com/1235868806?share=copy&fl=sv&fe=ci))]([https://www.youtube.com/embed/<VIDEO_ID>](https://vimeo.com/1235868806?share=copy&fl=sv&fe=ci))
+[![Watch the video](https://vimeo.com/1235868806?share=copy&fl=sv&fe=ci)](https://vimeo.com/1235868806?share=copy&fl=sv&fe=ci)
 

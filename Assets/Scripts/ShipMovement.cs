@@ -101,7 +101,7 @@ public class ShipMovement : MonoBehaviour
             Vector3 forceArm = applicationPoint.position - this.transform.position;
 
             // Torque vector = arm x force
-            Vector3 torqueVector = Vector3.Cross(forceArm, totalSailForce);
+            Vector3 torqueVector = Vector3.Cross(totalSailForce, forceArm);
 
             // Vertical Y torque rotates the ship left or right
             windInducedTorque = torqueVector.y * this.windTorqueMultiplier;
